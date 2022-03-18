@@ -1,8 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
-import './scss/index.scss';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+import "./scss/index.scss";
+import { worker } from "./mocks/browser";
+
+if (import.meta.env.DEV) {
+  worker.start();
+}
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,5 +16,5 @@ ReactDOM.render(
     </BrowserRouter>
   </React.StrictMode>,
 
-  document.getElementById('root')
+  document.getElementById("root")
 );
