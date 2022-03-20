@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "./scss/index.scss";
 import { worker } from "./mocks/browser";
+import { RecoilRoot } from "recoil";
 
 if (import.meta.env.DEV) {
   worker.start();
